@@ -1,14 +1,22 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "NPM package for Express Note Taker app.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "github.com/mavn2",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.16.4"
-  }
+    "express": "^4.17.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavn2/Note_Taker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mavn2/Note_Taker/issues"
+  },
+  "homepage": "https://github.com/mavn2/Note_Taker#readme"
 }
