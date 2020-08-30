@@ -13,7 +13,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 8080
 
 //Connects server code to route files
-//require('./routes')
+require('./routes')(app)
 
 //Establishes server, reports back
 app.listen(PORT, err => {
@@ -21,14 +21,3 @@ app.listen(PORT, err => {
   console.log(`listening ${PORT}`);
 });
 
-
-  //Homepage
-  app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../index.html'));
-    console.log('hello')
-  });
-
-  //Note page route
-  app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, '../../notes.html'));
-  });

@@ -3,7 +3,7 @@ const path = require('path')
 
 //HTML ROUTES
 
-//Exports routes, uses fn to pass ref to app as param
+//Exports routes, uses fn to pass reference to 'app' as parameter
 module.exports = function(app) {
   //Homepage route
   app.get('/', (req, res) => {
