@@ -2,15 +2,14 @@
 const path = require('path')
 
 //DB file required for access
-const db = require(path.join(__dirname, '../../../../db/db.json'))
-console.log(db)
+const noteDb = require(path.join(__dirname, '../../../../db/db.json'))
+
 //API ROUTES
 module.exports = app => {
   //GET method called by getNote fn
   app.get('/api/notes', (req, res) => {
-    console.log(req)
-    res.json(db)
-    console.log(res.json(db))
+    console.log('test')
+    res.json(noteDb)
   });
   //POST method called by saveNote fn
   //DELETE method called by deleteNote fn
