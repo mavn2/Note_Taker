@@ -8,9 +8,11 @@ const noteDb = require(path.join(__dirname, '../../../../db/db.json'))
 module.exports = app => {
   //GET method called by getNote fn
   app.get('/api/notes', (req, res) => {
-    console.log('test')
     res.json(noteDb)
   });
   //POST method called by saveNote fn
+  app.post('/api/notes', (req, res) => {
+    noteDb.push(req.body)
+  })
   //DELETE method called by deleteNote fn
 }
