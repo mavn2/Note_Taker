@@ -15,11 +15,13 @@ module.exports = app => {
   app.post('/api/notes', (req, res) => {
     req.body.id = noteDb.length;
     noteDb.push(req.body);
+    res.end();
   });
 
   //DELETE method called by deleteNote fn
   app.delete('/api/notes/*', (req, res) => {
     let id = (path.parse(req.url).name);
-    noteDb.splice(id, 1)
+    noteDb.splice(id, 1);
+    res.end();
   });
 }
