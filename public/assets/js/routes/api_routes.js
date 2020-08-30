@@ -20,5 +20,6 @@ module.exports = app => {
   //DELETE method called by deleteNote fn
   app.delete('/api/notes/*', (req, res) => {
     let id = (path.parse(req.url).name);
-  })
+    noteDb.splice(id, 1)
+  });
 }
