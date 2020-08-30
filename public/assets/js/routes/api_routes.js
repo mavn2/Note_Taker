@@ -2,7 +2,7 @@
 const path = require('path')
 
 //DB file required for access
-const noteDb = require(path.join(__dirname, '../../../../db/db.json'))
+let noteDb = require(path.join(__dirname, '../../../../db/db.json'))
 
 //API ROUTES
 module.exports = app => {
@@ -21,7 +21,10 @@ module.exports = app => {
   //DELETE method called by deleteNote fn
   app.delete('/api/notes/*', (req, res) => {
     let id = (path.parse(req.url).name);
-    noteDb.splice(id, 1);
+    let newDb = noteDb.filter(note => {
+      return note.id != id
+    });
+    noteDb = newDb
     res.end();
   });
 }
