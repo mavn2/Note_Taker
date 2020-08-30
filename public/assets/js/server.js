@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 8080
 
 //Connects server code to route files
 require('./routes/html_routes')(app)
+require('./routes/api_routes')
 
 //Establishes server, reports back
 app.listen(PORT, err => {
