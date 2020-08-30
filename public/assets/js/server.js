@@ -13,7 +13,7 @@ app.use(express.json());
 const PORT = process.env.PORT || 8080
 
 //Connects server code to route files
-require('./routes')(app)
+require('./routes/html_routes')(app)
 
 //Establishes server, reports back
 app.listen(PORT, err => {
