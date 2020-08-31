@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //Includes static js/css files in server
-app.use(express.static(path.join(__dirname, '../../')));
+app.use(express.static(path.join(__dirname, '/public')));
 
 //Finds port in deployed environment, or sets for local hosting
 const PORT = process.env.PORT || 8080;

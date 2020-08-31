@@ -2,7 +2,7 @@
 const path = require('path');
 
 //DB file required for access
-let noteDb = require(path.join(__dirname, '../../../../db/db.json'));
+let noteDb = require(path.join(__dirname, '../db/db.json'));
 
 //API ROUTES
 module.exports = app => {
@@ -14,8 +14,8 @@ module.exports = app => {
 
   //POST method called by saveNote fn
   app.post('/api/notes', (req, res) => {
-    //Assigns note an id based on its future position in array
-    req.body.id = noteDb.length;
+    //Assigns note an id greater then 0
+    req.body.id = noteDb.length + 1;
 
     //Pushes new note object to array
     noteDb.push(req.body);

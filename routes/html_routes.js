@@ -8,12 +8,12 @@ module.exports = app => {
   //Homepage route
   app.get('/', (req, res) => {
     //Sends index.html page
-    res.sendFile(path.join(__dirname, '../../../index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
   //Note page route
   app.get('/notes', (req, res) => {
     //Sends notes.html page
-    res.sendFile(path.join(__dirname, '../../../notes.html'));
+    res.sendFile(path.join(__dirname, '../public/notes.html'));
   });
 };
