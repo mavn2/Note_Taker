@@ -33,12 +33,17 @@ I tested this application through heavy use. Enter notes, check them, and delete
 
 ## Questions
 
-If you have any further questions, you can contact me at maxvnicolai@gmail.com. If you'd like to connect with me on GitHub, my user profile is [github.com/mavn2](github.com/mavn2).
+If you have any further questions, you can contact me at maxvnicolai@gmail.com. 
+
+If you'd like to connect with me on GitHub, my user profile is [github.com/mavn2](github.com/mavn2).
 
 ## Credits
 
 Thanks to everyone at the University of Washington Full Stack Boot-camp.
-Thanks to the developers of the Express Node.js module, both for their code and the excellent documentation located at [https://expressjs.com/](https://expressjs.com/)
+
+Thanks to the developers of the [Express NPM package](https://expressjs.com/), both for their code and the excellent documentation.
+
+The same thanks are due to the developers of the [UUID package](https://www.npmjs.com/package/uuid).
 
 ## License
 
