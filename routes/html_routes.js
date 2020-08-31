@@ -1,4 +1,4 @@
-//Required node modules
+//Required Node module, assists in handling filepaths
 const path = require('path');
 
 //HTML ROUTES

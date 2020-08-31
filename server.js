@@ -1,8 +1,10 @@
-//Required NPM module(s)
+//Required Node modules
+//Simplifies working with server
 const express = require('express');
+//Assists in handling filepaths
 const path = require('path');
 
-//Establishes express server
+//Establishes server with express
 const app = express();
 
 //Employs express to handle URLS and JSON files

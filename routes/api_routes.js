@@ -1,5 +1,8 @@
-//Path module required for consistent file access
+//Required Node Modules
+//Assists in handling filepaths
 const path = require('path');
+//Generates random UUID
+const {v4: uuidv4} = require('uuid')
 
 //DB file required for access
 let noteDb = require(path.join(__dirname, '../db/db.json'));
@@ -14,8 +17,8 @@ module.exports = app => {
 
   //POST method called by saveNote fn
   app.post('/api/notes', (req, res) => {
-    //Assigns note an id greater then 0
-    req.body.id = noteDb.length + 1;
+    //Creates/assigns note a UUID
+    req.body.id = uuidv4()
 
     //Pushes new note object to array
     noteDb.push(req.body);
